@@ -1,6 +1,7 @@
 
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { HiCurrencyDollar } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 const Job = ({job}) => {
 
     const {logo,id,job_title,company_name,location,remote_or_onsite,job_type,salary} = job
@@ -19,7 +20,8 @@ const Job = ({job}) => {
         <h2 className="flex"><HiCurrencyDollar className="text-2xl"/> {salary}</h2>
     </div>
     <div className="card-actions">
-      <button className="btn btn-primary">View Details</button>
+      <Link to={`/job/${id}`}>
+      <button className="btn btn-primary">View Details</button></Link>
     </div>
   </div>
 </div>
